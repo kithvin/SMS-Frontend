@@ -27,6 +27,11 @@ export default function Home() {
 const deleteTeacher =async (id) =>
     await axios.delete(`http://127.0.0.1:8080/api/teacher/${id}`)
     loadTeachers()
+
+    const deleteStudent =async (id) =>
+    await axios.delete(`http://127.0.0.1:8080/api/student/${id}`)
+    loadStudents()
+    
   return (
 
     <div className="container" style={{ marginTop: '20px' }}>
