@@ -29,7 +29,7 @@ export default function Navbar() {
           </Typography>
 
           <Link className="btn-blue" to="/addteacher">Add Teacher</Link>
-          <button className="btn-green">Add Student</button>
+          <Link className="btn-green" to="/addstudent">Add Student</Link>
         </Toolbar>
       </AppBar>
     </Box>
