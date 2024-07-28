@@ -5,6 +5,7 @@ import Navbar from './layout/Navbar'
 import Home from './page/Home'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import AddTeacher from './teacher/AddTeacher'
+import EditTeacher from './teacher/EditTeacher'
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route exact path ="/" element={<Home />}/>
         <Route exact path ="/addteacher" element={<AddTeacher/>}/>
+        <Route exact path ="/editteacher/:id" element={<EditTeacher/>}/>
       </Routes>
       <Footer/>
     </Router>
