@@ -91,13 +91,13 @@ const deleteTeacher =async (id) =>
                 <td>{student.email}</td>
                 <td>
                 <Link className='btn btn-primary mx-2'
-                to={`/viewteacher/${teacher.id}`}>View</Link>
+                to={`/viewstudent/${student.id}`}>View</Link>
 
                 <Link className='btn btn-outline-primary mx-2'
-                to ={`/editteacher/${teacher.id}`}>Edit</Link>
+                to ={`/editstudent/${student.id}`}>Edit</Link>
 
                 <button className='btn btn-danger mx-2'
-                onClick={() => deleteTeacher(teacher.id)}>Delete</button>
+                onClick={() => deleteStudent(student.id)}>Delete</button>
 
                 </td>
               </tr>

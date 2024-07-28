@@ -8,6 +8,7 @@ import AddTeacher from './teacher/AddTeacher'
 import EditTeacher from './teacher/EditTeacher'
 import ViewTeacher from './teacher/ViewTeacher'
 import AddStudent from './student/AddStudent'
+import EditStudent from './student/EditStudent'
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
         <Route exact path ="/viewteacher/:id" element={<ViewTeacher/>}/>
 
         <Route exact path ="/addstudent" element={<AddStudent/>}/>
+        <Route exact path ="/editstudent/:id" element={<EditStudent/>}/>
 
 
       </Routes>
