@@ -5,11 +5,13 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 export default function Home() {
 
     const [teacher,setTeachers]= useState([])
+    const [student,setStudents]= useState([])
 
     const {id}= useParams
 
     useEffect(()=>{
         loadTeachers()
+        loadStudents()
     },[])
 
   const loadTeachers= async()=>{
@@ -17,7 +19,12 @@ export default function Home() {
       setTeachers(result.data);
   }
 
-  const deleteTeacher =async (id) =>
+  const loadStudents= async()=>{
+    const result=await axios.get("http://127.0.0.1:8080/api/student")
+    setStudents(result.data);
+}
+
+const deleteTeacher =async (id) =>
     await axios.delete(`http://127.0.0.1:8080/api/teacher/${id}`)
     loadTeachers()
   return (
@@ -25,7 +32,7 @@ export default function Home() {
     <div className="container" style={{ marginTop: '20px' }}>
       
       {/* Teacher Table */}
-      <h1 className="text-center mb-5" style={{ marginTop: '60px', fontWeight: 'bold', color: '#FF4500' }}>Teacher Table</h1>
+      <h1 className="text-center mb-5" style={{ marginTop: '60px', fontWeight: 'bold', color: '#FF38B9' }}>Teacher Table</h1>
       <table className="table table-striped table-bordered shadow-sm rounded mx-auto text-center table table-bordered border-primary" style={{ color: 'purple', fontWeight: 'bold' }} >
         <thead className="thead-dark">
           <tr>
@@ -61,6 +68,45 @@ export default function Home() {
   
            </tbody>
           </table>
+
+          {/* Student Table */}
+      <h1 className="text-center mb-5" style={{ marginTop: '60px', fontWeight: 'bold', color: '#FF38B9' }}>Student Table</h1>
+      <table className="table table-striped table-bordered shadow-sm rounded mx-auto text-center table table-bordered border-primary" style={{ color: 'purple', fontWeight: 'bold' }} >
+        <thead className="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody className='table-group-divider'>
+        {   
+            student.map((student,index)=>(
+              <tr>
+                <th scope='row' key={index}>{index+1}</th>
+                <td>{student.username}</td>
+                <td>{student.name}</td>
+                <td>{student.email}</td>
+                <td>
+                <Link className='btn btn-primary mx-2'
+                to={`/viewteacher/${teacher.id}`}>View</Link>
+
+                <Link className='btn btn-outline-primary mx-2'
+                to ={`/editteacher/${teacher.id}`}>Edit</Link>
+
+                <button className='btn btn-danger mx-2'
+                onClick={() => deleteTeacher(teacher.id)}>Delete</button>
+
+                </td>
+              </tr>
+             ))
+            }
+  
+           </tbody>
+          </table>
+
       </div>
 
     
