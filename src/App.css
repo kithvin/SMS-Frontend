@@ -4,7 +4,26 @@
   width: 100%;
   text-align: center;
   padding: 10px;
-  background-color: #f8f9fa; /* Adjust based on this design */
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional: for a shadow effect */
+  background-color: #f8f9fa; 
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); 
 }
+
+
+body {
+  background-image: url('/src/images/bac.jpg'); /* Path to your image in the public folder */
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  background-attachment: fixed; /* Keeps the image fixed during scroll */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Optional: Set a default font */
+  height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+#root {
+  height: 100%; /* Ensure the root element takes up the full height */
+}
+
+
+
 
