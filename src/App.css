@@ -66,8 +66,13 @@ body {
   padding: 20px;
 }
 
-.card-heder{
-  background-color:#918BE1;
+.card-heder1{
+  background-color:#5C9CB8;
+  padding: 20px;
+}
+
+.card-heder2{
+  background-color:#7987A1;
   padding: 20px;
 }
 
@@ -79,6 +84,11 @@ body {
 
 .stu2-container
 {
+  background-color:#58FF33;
+  padding: 20px;
+}
+
+.stu1-container{
   background-color:#58FF33;
   padding: 20px;
 }

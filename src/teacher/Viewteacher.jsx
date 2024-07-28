@@ -29,8 +29,8 @@ export default function ViewTeacher() {
         <div className='col-md-6 border rounded p-4 mt-4 shadow blue-container'>
             <h2 className='text-center mb-4 fw-bold'>Teacher Details</h2>
       <div className='card text-center fw-bold'>
-        <div className='card-heder'>
-            Details of user id : {teacher.id}
+        <div className='card-heder2'>
+            Details of Teacher id : {teacher.id}
             <ul className='list-group list-group-flush'>
             <li className='list-group-item'>
             <b>User Name :</b>
