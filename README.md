@@ -11,3 +11,7 @@
 - npm install @mui/icons-material = use the install the matirial UI icon to the project
 
 - npm install axios --save = install the axios to the project
+
+- npm install react react-dom = install the react-dom to the project
+
+- npm install react-router-dom = install the react-router-dom to the project

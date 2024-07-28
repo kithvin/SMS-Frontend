@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 
 export default function Navbar() {
@@ -26,29 +27,9 @@ export default function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 'bold'}}>
             Student Management System
           </Typography>
-          <Button color="inherit" sx={{
-              backgroundColor: '#007bff', // Blue background color
-              color: '#fff', // White text color
-              fontWeight: 'bold', // Bold text
-              '&:hover': {
-                backgroundColor: '#0056b3', // Darker blue on hover
-              },
-              marginLeft: 1, // Margin between buttons
-              padding: '8px 16px', // Padding inside the button
-              borderRadius: 1, // Rounded corners
-            }}>Add Teacher</Button>
 
-          <Button color="inherit"sx={{
-              backgroundColor: '#28a745', // Green background color
-              color: '#fff', // White text color
-              fontWeight: 'bold', // Bold text
-              '&:hover': {
-                backgroundColor: '#218838', // Darker green on hover
-              },
-              marginLeft: 1, // Margin between buttons
-              padding: '8px 16px', // Padding inside the button
-              borderRadius: 1, // Rounded corners
-            }}>Add Student</Button>
+          <Link className="btn-blue" to="/addteacher">Add Teacher</Link>
+          <button className="btn-green">Add Student</button>
         </Toolbar>
       </AppBar>
     </Box>
