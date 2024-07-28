@@ -13,7 +13,7 @@ export default function AddTeacher() {
         email:""
     })
 
-        const {username,name,emial}=teacher
+        const {username,name,email}=teacher
 
         const onInputChange=(e)=>{
             setTeacher ({...teacher, [e.target.name]: e.target.value});
@@ -68,7 +68,7 @@ export default function AddTeacher() {
             className='form-control' 
             placeholder='Enter Teacher e-mail address'
             name='email'
-            value={emial}
+            value={email}
             onChange={(e)=>onInputChange(e)}/>
             </div>
             
